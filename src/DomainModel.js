@@ -1,20 +1,38 @@
 /** DomainReader */
-class DomainReader {
+export default class DomainReader {
     /**
-     * Ctor for reading the files
+     * Ctor (reads the files)
      */
     constructor() {
-        /**
-        * Member variables
-        * @typedef {Concept[]} concepts - list of Concepts
-        * @typedef {Task[]} tasks - list of tasks
-        */
-        let concepts;
-        let tasks;
-
-        // Code for reading the files
-
-        this._concepts = _concepts
-        this._tasks = _tasks
+        this.concepts = getData("http://localhost:3000/concepts");
+        this.tasks = getData("http://localhost:3000/tasks");
     }
 }
+
+/**
+ * Function to receive the data from a JSON file
+ * @param {string} url - URL where the jSON file is hosted
+ */
+async function getData(url) {
+    /** @type {string} */
+    let result;
+
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
+        }
+
+        result = await response.json();
+    } catch (error) {
+        console.error(error.message);
+    }
+
+    return (result);
+}
+
+// const Test = new DomainReader();
+
+// console.log(Test.concepts);
+
+console.log(await getData("http://localhost:3000/concepts"));

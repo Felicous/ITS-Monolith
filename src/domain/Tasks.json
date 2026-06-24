@@ -1,0 +1,12 @@
+[
+    {
+        "id": 0,
+        "concept": "If",
+        "type": "multipleChoice",
+        "difficulty": 0,
+        "explanation": "Which one is the correct return value for\nif (47 < 3) {\n    return(true);\n} else {\n    return(false);\n}",
+        "content": ["true", "false"],
+        "solution": ["false", "true"],
+        "hints": ["Its too easy"]
+    }
+]
