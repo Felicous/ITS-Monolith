@@ -1,7 +1,12 @@
 import express from "express";
 import fs from "fs";
 
-console.log("listening to port 3000\nPress 'ctrl + c' to close the connection.\n");
+/**
+ * This is a solution for reading the JSON files and passing the contents on to the vite-project.
+ * Run 'npm run filehost' to start the script.
+ */
+
+console.log("listening to port 3000\nPress 'ctrl + c' to close the connection.\n\n");
 
 const domain = express();
 domain.use(express.json());
@@ -23,14 +28,14 @@ function readJSON(filePath) {
  * Function that returns the contents of Concepts.json
  */
 domain.get("/concepts", (req, res) => {
-    res.json(readJSON('./src/domain/Concepts.json'));
+    res.json(readJSON('./src/persistence/Concepts.json'));
 })
 
 /**
  * Function that returns the contents of Tasks.json
  */
 domain.get("/tasks", (req, res) => {
-    res.json(readJSON('./src/domain/Tasks.json'));
+    res.json(readJSON('./src/persistence/Tasks.json'));
 })
 
 domain.listen(3000)
