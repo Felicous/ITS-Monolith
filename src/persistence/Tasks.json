@@ -1,12 +1,67 @@
 [
     {
-        "id": 0,
-        "concept": "If",
-        "type": "multipleChoice",
-        "difficulty": 0,
-        "explanation": "Which one is the correct return value for\nif (47 < 3) {\n    return(true);\n} else {\n    return(false);\n}",
-        "content": ["true", "false"],
-        "solution": ["false", "true"],
-        "hints": ["Its too easy"]
+        "id": 2,
+        "concept": "for_loops",
+        "type": "multiple-choice",
+        "difficulty": 1,
+        "explanation": "this is a test task 2",
+        "content": ["A", "B", "C"],
+        "solution": "B",
+        "hints": []
+    },
+
+    {
+        "id": 4,
+        "concept": "for_loops",
+        "type": "multiple-choice",
+        "difficulty": 1,
+        "explanation": "this is a test task 4",
+        "content": ["A", "B", "C"],
+        "solution": "B",
+        "hints": []
+    },
+
+    {
+        "id": 5,
+        "concept": "for_loops",
+        "type": "multiple-choice",
+        "difficulty": 1,
+        "explanation": "this is a test task 5",
+        "content": ["A", "B", "C"],
+        "solution": "B",
+        "hints": []
+    },
+
+    {
+        "id": 6,
+        "concept": "for_loops",
+        "type": "multiple-choice",
+        "difficulty": 1,
+        "explanation": "this is a test task 6",
+        "content": ["A", "B", "C"],
+        "solution": "B",
+        "hints": []
+    },
+
+    {
+        "id": 7,
+        "concept": "for_loops",
+        "type": "multiple-choice",
+        "difficulty": 1,
+        "explanation": "this is a test task 7",
+        "content": ["A", "B", "C"],
+        "solution": "B",
+        "hints": []
+    },
+
+    {
+        "id": 12,
+        "concept": "for_loops",
+        "type": "multiple-choice",
+        "difficulty": 1,
+        "explanation": "this is a test task 12",
+        "content": ["A", "B", "C"],
+        "solution": "B",
+        "hints": []
     }
 ]

@@ -6,10 +6,10 @@ import fs from "fs";
  * Run 'npm run filehost' to start the script.
  */
 
-console.log("listening to port 3000\nPress 'ctrl + c' to close the connection.\n\n");
-
-const domain = express();
-domain.use(express.json());
+const PORT = 3000;
+const app = express();
+app.use(express.json());
+app.use(express.text());
 
 /**
  * Function for reading JSON files an responding with Errorcode if necessary
@@ -25,17 +25,41 @@ function readJSON(filePath) {
 }
 
 /**
- * Function that returns the contents of Concepts.json
+ * Function which returns the contents of Concepts.json
  */
-domain.get("/concepts", (req, res) => {
+app.get("/concepts", (req, res) => {
     res.json(readJSON('./src/persistence/Concepts.json'));
-})
+});
 
 /**
- * Function that returns the contents of Tasks.json
+ * Function which returns the contents of Tasks.json
  */
-domain.get("/tasks", (req, res) => {
+app.get("/tasks", (req, res) => {
     res.json(readJSON('./src/persistence/Tasks.json'));
-})
+});
 
-domain.listen(3000)
+/**
+ * Function which returns the contents of Student.json
+ */
+app.get("/student", (req, res) => {
+    res.json(readJSON('./src/persistence/Student.json'));
+});
+
+/**
+ * Function which saves the given object in Student.json
+ */
+app.post("/student", (req, res) => {
+    fs.writeFileSync(
+        './src/persistence/Student.json',
+        req.body
+    );
+    res.sendStatus(200);
+});
+
+
+app.listen(PORT,
+    function (err) {
+        if (err) console.log(err);
+        console.log("Server listening on PORT", PORT, "\nPress 'ctrl + c' to close the connection");
+    }
+); 
