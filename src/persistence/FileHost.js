@@ -49,17 +49,21 @@ app.get("/student", (req, res) => {
  * Function which saves the given object in Student.json
  */
 app.post("/student", (req, res) => {
-    fs.writeFileSync(
-        './src/persistence/Student.json',
-        req.body
-    );
-    res.sendStatus(200);
+    try {
+        fs.writeFileSync(
+            './src/persistence/Student.json',
+            req.body
+        );
+        res.sendStatus(200);
+    } catch (err) {
+        console.error(err);
+    }
 });
 
 
 app.listen(PORT,
     function (err) {
-        if (err) console.log(err);
+        if (err) console.error(err);
         console.log("Server listening on PORT", PORT, "\nPress 'ctrl + c' to close the connection");
     }
 ); 

@@ -158,7 +158,7 @@ export async function save() {
                 'Accept':'application/json',
                 'Conten-Type': 'application/json'
             },
-            body: JSON.stringify(student)
+            body: JSON.stringify(student, null, 4)
         }
     );
 }
