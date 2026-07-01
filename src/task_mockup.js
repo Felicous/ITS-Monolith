@@ -14,11 +14,24 @@ export const Tasks = [
     {
     id: 2,
     concept: "for_loops",
-    type: "multiple-choice",
+    type: "code-completion",
     difficulty: 1,
     explanation: "this is a test task 2",
-    content: ["A", "B", "C"],
-    solution: "B",
+    content: [
+            {
+          "type": "text",
+          "text": "int y = 4;"
+        },
+        {
+          "type": "input",
+          "id": 0
+        },
+        {
+          "type": "text",
+          "text": "std:: cout << x == y << std::endl;"
+        }
+    ],
+    solution: "int x = y",
     hints: []
 },
 
