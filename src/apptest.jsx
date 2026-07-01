@@ -1,7 +1,10 @@
 import { useState } from 'react'
-import { Button } from '@mui/material'
+import { 
+  Button,
+  Box
+ } from '@mui/material'
 // import { task } from './task_mockup'
-import { DisplayMultiplechoice } from './DisplayMultiplechoice'
+// import { DisplayMultiplechoice } from './DisplayMultiplechoice'
 import { HintDisplay } from './HintDisplay';
 import { TaskSelection } from './TaskSelection'
 import { RenderTask } from './RenderTask';
@@ -19,7 +22,10 @@ function TestApp() {
     </Button>
 {/* Display only shows up, when task was selected */}
     {nextTask && (
-        <RenderTask task={nextTask} />
+        <Box>
+          <RenderTask task={nextTask} />
+          <HintDisplay task ={nextTask} />
+        </Box>
       )}
     </>
   )
