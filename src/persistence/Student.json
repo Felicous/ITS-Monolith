@@ -2,15 +2,18 @@
     "knowledge": [
         {
             "id": "for_loops",
-            "mastery": 0.34
+            "mastery": 0.34,
+            "presented": false
         },
         {
             "id": "ternary_op",
-            "mastery": 0.42
+            "mastery": 0.42,
+            "presented": true
         },
         {
             "id": "arrays",
-            "mastery": 0.4
+            "mastery": 0.4,
+            "presented": true
         }
     ],
     "completedTasks": [
