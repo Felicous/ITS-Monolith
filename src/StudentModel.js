@@ -1,8 +1,8 @@
-import { assessMastery } from './MasteryAssenssment_Mockup.js';  // <-- !!!Insert real MasteryAssessment here and chang name of 'assessMastery' if needed!!!
+import { assessMastery } from './MasteryAssenssment.js';
 
 /** StudentReader */
 /** @type {number} - Threshold that determines the mastery of a concept */
-const masteryThreshold = 1;  // <-- !!!Insert real threshold here!!!
+const masteryThreshold = 0.95;
 
 /** Loading student data */
 /** @type {object} - knowledge and conpletedTasks from the student */

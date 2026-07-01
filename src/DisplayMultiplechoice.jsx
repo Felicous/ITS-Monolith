@@ -11,7 +11,6 @@ import {
   FormHelperText,
 } from "@mui/material";
 
-
 export function DisplayMultiplechoice({task}) {
 
   const [selected, setSelected] = useState([]);

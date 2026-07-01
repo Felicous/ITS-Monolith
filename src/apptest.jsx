@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { Button } from '@mui/material'
 // import { task } from './task_mockup'
-// import { DisplayMultiplechoice } from './DisplayMultiplechoice'
+import { DisplayMultiplechoice } from './DisplayMultiplechoice'
+import { HintDisplay } from './HintDisplay';
 import { TaskSelection } from './TaskSelection'
 import { RenderTask } from './RenderTask';
 
@@ -24,4 +25,4 @@ function TestApp() {
   )
 }
 
-export default TestApp
+export default TestApp;
