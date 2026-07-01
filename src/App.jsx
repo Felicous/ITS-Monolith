@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
+import { domainReader } from './DomainModel.js';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -115,6 +116,12 @@ function App() {
 
       <div className="ticks"></div>
       <section id="spacer"></section>
+      <div className='Concept 0'>
+        <h2 className='id'>Concept {domainReader.concepts[0].id}</h2>
+        <div className='prerequisites'>Prerequisites: {domainReader.concepts[0].prerequisites}</div>
+        <div className='tasks'>Tasks: {domainReader.concepts[0].tasks}</div>
+        <div className='explanation'>Explanation: {domainReader.concepts[0].explanation}</div>
+      </div>
     </>
   )
 }

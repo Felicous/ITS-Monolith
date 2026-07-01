@@ -1,0 +1,22 @@
+[
+    {
+        "id": "for_loops",
+        "prerequisites": [],
+        "tasks": [0, 1, 2, 3, 4],
+        "explanation": "explanation of the concept"
+    },
+
+    {
+        "id": "ternary_op",
+        "prerequisites": ["for_loops"],
+        "tasks": [5, 6, 7, 8, 9],
+        "explanation": "explanation of the concept"
+    },
+
+    {
+        "id": "arrays",
+        "prerequisites": ["for_loops", "ternary_op"],
+        "tasks": [10, 11, 12, 13, 14],
+        "explanation": "explanation of the concept"
+    }
+]
