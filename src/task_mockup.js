@@ -31,7 +31,7 @@ export const Tasks = [
           "text": "std:: cout << x == y << std::endl;"
         }
     ],
-    solution: "int x = y",
+    solution: ["int x = y"],
     hints: []
 },
 

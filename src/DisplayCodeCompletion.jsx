@@ -3,11 +3,38 @@ import {
   Box,
   Typography,
   TextField,
+  Button
 } from "@mui/material";
 
-export function DisplayCodeCompletion({task}) {
+export function DisplayCodeCompletion({task, onSubmit}) {
 
-    const [answers, setAnswer] = useState([]);
+    const [answers, setAnswer] = useState(() =>
+        Array(task.solution.length).fill("")
+    );
+
+    const handleChange = (index, input) => {
+
+        const newAnswers = [...answers];
+        newAnswers[index] = input;
+        setAnswer(newAnswers);
+    };
+
+    const [error, setError] = useState(false);
+  
+    const handleSubmit = () => {
+        const invalid = answers.some(value => value.trim() === "");
+  
+        setError(invalid);
+  
+        if (invalid) {
+        return;
+        }
+
+        if (!invalid) {
+        onSubmit(answers)
+        }
+    };
+
 
     return (
 
@@ -32,12 +59,11 @@ export function DisplayCodeCompletion({task}) {
                             <TextField
                                 key={item.id}
                                 variant="standard"
+                                error={error}
+                                helperText={error ? "please complete the code snippet" : ""}
                                 value={answers[item.id] ?? ""}
                                 onChange={(e) =>
-                                    setAnswer(prev => ({
-                                    ...prev,
-                                    [item.id]: e.target.value,
-                                    }))
+                                    handleChange(item.id, e.target.value)
                                 }
                                 InputProps={{
                                     disableUnderline: true,
@@ -49,11 +75,16 @@ export function DisplayCodeCompletion({task}) {
                                     }
                                 }}
                                 sx={{ mb: 2 }}
-                            />
+                            />                            
                         );
                 }
 
             })}
+
+            <Button variant="contained" onClick={handleSubmit}>
+                Submit
+            </Button>
+
         </Box>
 
     )

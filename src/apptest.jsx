@@ -8,12 +8,20 @@ import {
 import { HintDisplay } from './HintDisplay';
 import { TaskSelection } from './TaskSelection'
 import { RenderTask } from './RenderTask';
+import { InputAnalysis } from './InputAnalysis';
+import { updateStudent } from './StudentModel';
 
 
 
 function TestApp() {
 
     const [nextTask, setTask] = useState(null);
+
+    function HandleUserInput(task, input) {
+      const correct = InputAnalysis(task, input);
+      updateStudent(task.id, task.concept, correct);
+      console.log("hallo")
+    }
 
   return (
     <>
@@ -23,7 +31,10 @@ function TestApp() {
 {/* Display only shows up, when task was selected */}
     {nextTask && (
         <Box>
-          <RenderTask task={nextTask} />
+          <RenderTask 
+            task={nextTask} 
+            onSubmit={HandleUserInput}
+          />
           <HintDisplay task ={nextTask} />
         </Box>
       )}
