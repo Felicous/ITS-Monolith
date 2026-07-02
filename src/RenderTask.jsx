@@ -1,4 +1,5 @@
 import { DisplayCodeCompletion } from "./DisplayCodeCompletion";
+import { DisplayExplanation } from "./DisplayExplanation";
 import { DisplayMultiplechoice } from "./DisplayMultiplechoice";
 
 export function RenderTask({task, onSubmit}) {
@@ -16,6 +17,9 @@ export function RenderTask({task, onSubmit}) {
                     task={task}
                     onSubmit={(input) => onSubmit(task, input)}
                 />;
+
+        case "explanation":
+            return <DisplayExplanation task={task}/>;
 
         default:
             return <div> ERROR </div>;

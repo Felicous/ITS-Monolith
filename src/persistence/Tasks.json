@@ -1,10 +1,56 @@
 [
     {
+        "id": 0,
+        "concept": "for_loops",
+        "type": "code-completion",
+        "difficulty": 1,
+        "explanation": "this is a test task 0",
+        "content": [
+            {
+                "type": "text",
+                "text": "int y = 4;"
+            },
+            {
+                "type": "input",
+                "id": 0
+            },
+            {
+                "type": "text",
+                "text": "std:: cout << x == y << std::endl;"
+            }
+        ],
+        "solution": "int x = y",
+        "hints": []
+    },
+
+    {
+        "id": 1,
+        "concept": "for_loops",
+        "type": "multiple-choice",
+        "difficulty": 1,
+        "explanation": "this is a test task 1",
+        "content": ["A", "B", "C"],
+        "solution": "B",
+        "hints": []
+    },
+
+    {
         "id": 2,
         "concept": "for_loops",
         "type": "multiple-choice",
         "difficulty": 1,
         "explanation": "this is a test task 2",
+        "content": ["A", "B", "C"],
+        "solution": "B",
+        "hints": []
+    },
+
+    {
+        "id": 3,
+        "concept": "for_loops",
+        "type": "multiple-choice",
+        "difficulty": 1,
+        "explanation": "this is a test task 3",
         "content": ["A", "B", "C"],
         "solution": "B",
         "hints": []
@@ -27,39 +73,6 @@
         "type": "multiple-choice",
         "difficulty": 1,
         "explanation": "this is a test task 5",
-        "content": ["A", "B", "C"],
-        "solution": "B",
-        "hints": []
-    },
-
-    {
-        "id": 6,
-        "concept": "for_loops",
-        "type": "multiple-choice",
-        "difficulty": 1,
-        "explanation": "this is a test task 6",
-        "content": ["A", "B", "C"],
-        "solution": "B",
-        "hints": []
-    },
-
-    {
-        "id": 7,
-        "concept": "for_loops",
-        "type": "multiple-choice",
-        "difficulty": 1,
-        "explanation": "this is a test task 7",
-        "content": ["A", "B", "C"],
-        "solution": "B",
-        "hints": []
-    },
-
-    {
-        "id": 12,
-        "concept": "for_loops",
-        "type": "multiple-choice",
-        "difficulty": 1,
-        "explanation": "this is a test task 12",
         "content": ["A", "B", "C"],
         "solution": "B",
         "hints": []

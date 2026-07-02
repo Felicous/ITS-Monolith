@@ -97,13 +97,14 @@ export function updateStudent(taskID, concept, correct) {
 
 /**
  * Returns a list of all concepts, which mastery is higher than the threshold
+ * @param {number} threshold - Threshold at wich the concept couns as mastered
  * @returns {string[]} List of known concepts
  */
-export function getKnownConcepts() {
+export function getKnownConcepts(threshold = masteryThreshold) {
     /** @type {string[]} - List of known concepts */
     let knownConcepts = [];
     student.knowledge.forEach(element => {
-        if (element.mastery >= masteryThreshold) {
+        if (element.mastery >= threshold) {
             knownConcepts.push(element.id);
         }
     });
@@ -143,6 +144,35 @@ export function getFailedTasks(concept) {
         return (competedTasks);
     } else {
         return (competedTasks.failedTasks);
+    }
+}
+
+/**
+ * Sets the mastery to the masteryThreshold.
+ * Use when all tasks of the concept are solved correctly.
+ * @param {string} concept - Concept to be mastered.
+ */
+export function masterConcept(concept) {
+    /** @type {int} - Id of the concept in student.knowledge */
+    const knowledgeIndex = student.knowledge.findIndex((element) => element.id == concept);
+
+    student.knowledge[knowledgeIndex].mastery = 0.95;
+}
+
+/**
+ * Returns beather the concept has been presented.
+ * @param {string} concept - The concept in question.
+ * @returns {boolean} Has the concept been presented.
+ */
+export function wasPresented(concept) {
+    /** @type {int} - Id of the concept in student.knowledge */
+    const knowledgeIndex = student.knowledge.findIndex((element) => element.id == concept);
+
+    if (!student.knowledge[knowledgeIndex].presented) {
+        student.knowledge[knowledgeIndex].presented = true;
+        return (false);
+    } else {
+        return (true);
     }
 }
 
