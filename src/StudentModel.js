@@ -180,7 +180,7 @@ export function wasPresented(concept) {
  * Saves the student data to Student.json
  */
 export async function save() {
-    const data = await fetch(
+    await fetch(
         "http://localhost:3000/student",
         {
             method: 'POST',

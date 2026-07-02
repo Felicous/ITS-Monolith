@@ -20,7 +20,7 @@ function TestApp() {
     function HandleUserInput(task, input) {
       const correct = InputAnalysis(task, input);
       updateStudent(task.id, task.concept, correct);
-      console.log("hallo")
+      // save aufrufen für speichern in persistenz
     }
 
   return (

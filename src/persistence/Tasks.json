@@ -19,7 +19,7 @@
                 "text": "std:: cout << x == y << std::endl;"
             }
         ],
-        "solution": "int x = y",
+        "solution": ["int x = y"],
         "hints": []
     },
 
@@ -30,7 +30,7 @@
         "difficulty": 1,
         "explanation": "this is a test task 1",
         "content": ["A", "B", "C"],
-        "solution": "B",
+        "solution": ["B"],
         "hints": []
     },
 
@@ -41,7 +41,7 @@
         "difficulty": 1,
         "explanation": "this is a test task 2",
         "content": ["A", "B", "C"],
-        "solution": "B",
+        "solution": ["B"],
         "hints": []
     },
 
@@ -52,7 +52,7 @@
         "difficulty": 1,
         "explanation": "this is a test task 3",
         "content": ["A", "B", "C"],
-        "solution": "B",
+        "solution": ["B"],
         "hints": []
     },
 
@@ -63,7 +63,7 @@
         "difficulty": 1,
         "explanation": "this is a test task 4",
         "content": ["A", "B", "C"],
-        "solution": "B",
+        "solution": ["B"],
         "hints": []
     },
 
@@ -74,7 +74,7 @@
         "difficulty": 1,
         "explanation": "this is a test task 5",
         "content": ["A", "B", "C"],
-        "solution": "B",
+        "solution": ["B"],
         "hints": []
     }
 ]

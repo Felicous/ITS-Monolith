@@ -11,6 +11,12 @@ const app = express();
 app.use(express.json());
 app.use(express.text());
 
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*"); // Erlaubt jedem Frontend (auch Port 5173) den Zugriff
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
 /**
  * Function for reading JSON files an responding with Errorcode if necessary
  * @param {string} filePath - path of the JSON file
