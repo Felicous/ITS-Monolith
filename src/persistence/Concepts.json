@@ -3,20 +3,36 @@
         "id": "for_loops",
         "prerequisites": [],
         "tasks": [0, 1, 2, 3, 4, 5],
-        "explanation": "explanation of the concept for loops"
+        "explanation": "The 'for loop' can be used when a block of code needs to be executed a set amount of times. 'statement1' is executed bevore the loop begins. For examle 'int idx = 0'. 'statement2' is the condition for the execution of the code inside of the loop. For example 'idx <= 5'. 'statement3' is executed everytime when the code in the loop got executed and is usually used to progress towards the end of the condition in 'statement2'. For example 'idx++'. In this example the loop would be executed 6 times for every number from 0 to 5.",
+        "content": [
+            {
+                "indent": "0em",
+                "text": "for (statement1; statement2; statement3) {"
+            },
+            {
+                "indent": "2em",
+                "text": "// code;"
+            },
+            {
+                "indent": "0em",
+                "text": "}"
+            }
+        ]
     },
 
     {
         "id": "ternary_op",
         "prerequisites": ["for_loops"],
         "tasks": [6, 7, 8, 9],
-        "explanation": "explanation of the concept"
+        "explanation": "explanation of the concept",
+        "content": []
     },
 
     {
         "id": "arrays",
         "prerequisites": ["for_loops", "ternary_op"],
         "tasks": [10, 11, 12, 13, 14],
-        "explanation": "explanation of the concept"
+        "explanation": "explanation of the concept",
+        "content": []
     }
 ]

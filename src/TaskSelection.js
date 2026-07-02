@@ -10,7 +10,7 @@ import { getCorrectTasks, getFailedTasks, getKnowledge, getKnownConcepts, master
  *     difficulty: int,
  *     explanation: string,
  *     content: array
- *     solution: any,
+ *     solution: string[],
  *     hints: string[]
  * }} Next task.
  */
@@ -37,7 +37,8 @@ export function TaskSelection() {
     if (unknownConcepts.length == 0) {
         return ({
             type: "explanation",
-            explanation: "Congratulations. You have mastered all concepts of this course and are now able to programm a little bit in C++."
+            explanation: "Congratulations. You have mastered all concepts of this course and are now able to programm a little bit in C++.",
+            content: [{ indent: "0em", text: "Congratulations"}]
         });
     }
 
@@ -53,7 +54,8 @@ export function TaskSelection() {
     if (!wasPresented(nextConcept.id)) {
         return ({
             type: "explanation",
-            explanation: nextConcept.explanation
+            explanation: nextConcept.explanation,
+            content: nextConcept.content
         });
     }
 
@@ -64,7 +66,8 @@ export function TaskSelection() {
         masterConcept(nextConcept.id);
         return ({
             type: "explanation",
-            explanation: "You have mastered this concept due to a lack of tasks."
+            explanation: "You have mastered this concept due to a lack of tasks.",
+            content: []
         });
     }
 
