@@ -239,5 +239,169 @@
       "The array name comes before the brackets.",
       "The number inside the brackets specifies the array size."
     ]
+  },
+
+  {
+      "id": 15,
+      "concept": "if_statements",
+      "type": "multiple-choice",
+      "difficulty": 1,
+      "explanation": "Which keyword is used in C++ to check an alternative condition if the first 'if' condition was false?",
+      "content": ["else if", "elif", "otherwise"],
+      "solution": "else if",
+      "hints": [
+        "This keyword combines 'else' and 'if'.",
+        "It allows you to check another condition if the first one was false."
+      ]
+  },
+
+  {
+      "id": 16,
+      "concept": "if_statements",
+      "type": "multiple-choice",
+      "difficulty": 1,
+      "explanation": "What happens if the condition in an if statement evaluates to 'false' and no 'else' block exists?",
+      "content": ["The code inside the curly braces is skipped and the program continues normally.", "The program crashes.", "The compiler throws an error."],
+      "solution": "The code inside the curly braces is skipped and the program continues normally.",
+      "hints": [
+        "Think about what happens when no condition matches.",
+        "An 'else' block is optional."
+      ]
+  },
+
+  {
+      "id": 17,
+      "concept": "if_statements",
+      "type": "code-completion",
+      "difficulty": 2,
+      "explanation": "Complete the condition so that the code executes if the variable 'age' is at least 18.",
+      "content": [
+          { "type": "text", "text": "if (age " },
+          { "type": "input", "id": 0 },
+          { "type": "text", "text": ") { std::cout << \"Adult\"; }" }
+      ],
+      "solution": ">= 18",
+      "hints": [
+       "At least 18 means 18 or greater.",
+        "Use the 'greater than or equal to' comparison operator."
+      ]
+  },
+
+  {
+      "id": 18,
+      "concept": "if_statements",
+      "type": "code-completion",
+      "difficulty": 2,
+      "explanation": "Complete the code to check if the variable 'x' is exactly equal to 0.",
+      "content": [
+          { "type": "text", "text": "if (x " },
+          { "type": "input", "id": 0 },
+          { "type": "text", "text": ") { std::cout << \"Zero\"; }" }
+      ],
+      "solution": "== 0",
+      "hints": [
+        "Use the equality comparison operator, not the assignment operator.",
+        "You want to compare 'x' with 0."
+    ]
+  },
+
+  {
+      "id": 19,
+      "concept": "if_statements",
+      "type": "code-completion",
+      "difficulty": 3,
+      "explanation": "Complete the conditional structure for the default fallback case, which executes when none of the above if/else-if conditions were true.",
+      "content": [
+          { "type": "text", "text": "if (a > b) { /*...*/ } else if (a < b) { /*...*/ } " },
+          { "type": "input", "id": 0 },
+          { "type": "text", "text": " { std::cout << \"Equal\"; }" }
+      ],
+      "solution": "else",
+      "hints": [
+        "This block runs if none of the previous conditions were true.",
+        "It does not require a condition."
+    ]
+  },
+
+  {
+      "id": 20,
+      "concept": "while_loops",
+      "type": "multiple-choice",
+      "difficulty": 1,
+      "explanation": "When is the condition checked in a standard 'while' loop in C++?",
+      "content": ["Before each iteration of the loop (pre-test)", "After each iteration of the loop (post-test)", "Only once at the very beginning"],
+      "solution": "Before each iteration of the loop (pre-test)",
+      "hints": [ 
+        "A while loop is called a pre-test loop.",
+        "The condition is checked before the loop body executes."
+    ]
+  },
+
+  {
+      "id": 21,
+      "concept": "while_loops",
+      "type": "multiple-choice",
+      "difficulty": 2,
+      "explanation": "What happens in the following code snippet?\nint i = 0;\nwhile(i < 5) {\n  std::cout << i;\n}",
+      "content": ["It creates an infinite loop because 'i' is never incremented inside the loop.", "The numbers 0 to 4 are printed.", "The code executes exactly 5 times."],
+      "solution": "It creates an infinite loop because 'i' is never incremented inside the loop.",
+      "hints": [ 
+        "Look for a statement that changes 'i'.",
+        "If the condition never becomes false, the loop never ends."
+    ]
+  },
+
+  {
+      "id": 22,
+      "concept": "while_loops",
+      "type": "code-completion",
+      "difficulty": 2,
+      "explanation": "Complete the loop condition so that the loop runs as long as the variable 'counter' is greater than 0.",
+      "content": [
+          { "type": "text", "text": "while (" },
+          { "type": "input", "id": 0 },
+          { "type": "text", "text": ") { counter--; }" }
+      ],
+      "solution": "counter > 0",
+      "hints": [
+        "The loop should continue only while 'counter' is positive.",
+        "Use the 'greater than' comparison operator."
+    ]
+  },
+
+  {
+      "id": 23,
+      "concept": "while_loops",
+      "type": "code-completion",
+      "difficulty": 3,
+      "explanation": "Create an intentional infinite loop by entering a condition that is always true.",
+      "content": [
+          { "type": "text", "text": "while (" },
+          { "type": "input", "id": 0 },
+          { "type": "text", "text": ") { // Infinite code }" }
+      ],
+      "solution": "true",
+      "hints": [
+        "Use a condition that never evaluates to false.",
+        "There is a boolean literal that is always true."
+      ]
+  },
+
+  {
+      "id": 24,
+      "concept": "while_loops",
+      "type": "code-completion",
+      "difficulty": 3,
+      "explanation": "Complete the loop header of a while loop that runs as long as the boolean 'isGameOver' is NOT true (meaning false).",
+      "content": [
+          { "type": "text", "text": "while (" },
+          { "type": "input", "id": 0 },
+          { "type": "text", "text": ") { // Game is running... }" }
+      ],
+      "solution": "!isGameOver",
+      "hints": [
+        "The loop should continue while the game is not over.",
+        "Use the logical NOT operator."
+    ]
   }
 ]
