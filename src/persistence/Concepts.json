@@ -3,20 +3,36 @@
         "id": "for_loops",
         "prerequisites": [],
         "tasks": [0, 1, 2, 3, 4, 5],
-        "explanation": "Welcome to the topic of for loops! A for loop is used in C++ to repeat a block of code a specific number of times. It consists of the initialization (e.g., int i = 0), the loop condition (e.g., i < 10), and the increment (e.g., i++)"
+        "explanation": "Welcome to the topic of for loops! A for loop is used in C++ to repeat a block of code a specific number of times. It consists of the initialization (e.g., int i = 0), which is executed bevore the loop begins, the loop condition (e.g., i < 10), and the increment (e.g., i++), which is executed everytime when the code in the loop got executed and is usually used to progress towards the end of the loop condition. For example 'i++'. Here the loop would be executed 6 times for every number from 0 to 5",
+        "content": [ 
+        {
+                "indent": "0em",
+                "text": "for (statement1; statement2; statement3) {"
+            },
+            {
+                "indent": "2em",
+                "text": "// code;"
+            },
+            {
+                "indent": "0em",
+                "text": "}"
+            }
+        ]
     },
 
     {
         "id": "ternary_op",
         "prerequisites": ["for_loops"],
         "tasks": [6, 7, 8, 9],
-        "explanation": "Welcome to the ternary operator (?:)! This operator is a shorthand for a simple if-else statement. The syntax is: condition ? value_if_true : value_if_false;"
+        "explanation": "Welcome to the ternary operator (?:)! This operator is a shorthand for a simple if-else statement. The syntax is: condition ? value_if_true : value_if_false;",
+        "content": []
     },
 
     {
         "id": "arrays",
         "prerequisites": ["for_loops", "ternary_op"],
         "tasks": [10, 11, 12, 13, 14],
-        "explanation": "Welcome to arrays! An array stores multiple values ​​of the same data type contiguously in memory. In C++, for example, you declare an array like this: int meinArray[5]; Access is achieved via an index that always starts at 0."
+        "explanation": "Welcome to arrays! An array stores multiple values ​​of the same data type contiguously in memory. In C++, for example, you declare an array like this: int meinArray[5]; Access is achieved via an index that always starts at 0.",
+        "content": []
     }
 ]
