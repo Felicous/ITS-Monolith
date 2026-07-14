@@ -6,7 +6,7 @@
     "difficulty": 1,
     "explanation": "How many times does this loop execute?",
     "content": ["4 times", "5 times", "6 times"],
-    "solution": "5 times",
+    "solution": ["5 times"],
     "hints": [
       "Pay attention to the loop condition.",
       "Count all iterations, including the first one."
@@ -24,7 +24,7 @@
       { "type": "input", "id": 0 },
       { "type": "text", "text": "; i++) { /* Code */ }" }
     ],
-    "solution": "i < 10",
+    "solution": ["i < 10"],
     "hints": [
       "The loop starts at 0.",
       "The condition should stop before reaching 10."
@@ -38,7 +38,7 @@
     "difficulty": 2,
     "explanation": "What does this code output?\nint sum = 0;\nfor(int i = 1; i <= 3; i++) {\n  sum += i;\n}\nstd::cout << sum;",
     "content": ["3", "5", "6"],
-    "solution": "6",
+    "solution": ["6"],
     "hints": [
       "Track the value of 'sum' after each iteration.",
       "The values 1, 2, and 3 are added together."
@@ -56,7 +56,7 @@
       { "type": "input", "id": 0 },
       { "type": "text", "text": ") {}" }
     ],
-    "solution": "i += 2",
+    "solution": ["i += 2"],
     "hints": [
       "Look at the update expression.",
       "Increase the counter by two each iteration."
@@ -74,7 +74,7 @@
       "The loop runs 5 times in reverse",
       "The code does not compile"
     ],
-    "solution": "Infinite loop (until integer overflow)",
+    "solution": ["Infinite loop (until integer overflow)"],
     "hints": [
       "Check whether the update moves the loop toward the stopping condition.",
       "Does 'i' get smaller or larger?"
@@ -88,7 +88,7 @@
     "difficulty": 3,
     "explanation": "How can you exit a loop early in C++ without changing its condition?",
     "content": ["return", "break", "exit"],
-    "solution": "break",
+    "solution": ["break"],
     "hints": [
       "There is a keyword specifically for leaving loops.",
       "'return' exits the current function."
@@ -102,7 +102,7 @@
     "difficulty": 1,
     "explanation": "Which symbol separates the true value from the false value in the ternary operator?",
     "content": ["The question mark (?)", "The colon (:)", "The semicolon (;)"],
-    "solution": "The colon (:)",
+    "solution": ["The colon (:)"],
     "hints": [
       "The ternary operator has the form: condition ? true : false.",
       "One symbol starts the choices, another separates them."
@@ -116,7 +116,7 @@
     "difficulty": 2,
     "explanation": "What is the value of 'x' after this line?\nint x = (10 > 5) ? 42 : 99;",
     "content": ["10", "42", "99"],
-    "solution": "42",
+    "solution": ["42"],
     "hints": [
       "Evaluate the condition first.",
       "If the condition is true, the value before ':' is chosen."
@@ -134,7 +134,7 @@
       { "type": "input", "id": 0 },
       { "type": "text", "text": ";" }
     ],
-    "solution": "? a : b",
+    "solution": ["? a : b"],
     "hints": [
       "The condition is already provided.",
       "Choose 'a' if the condition is true, otherwise choose 'b'."
@@ -148,7 +148,7 @@
     "difficulty": 3,
     "explanation": "What is printed here?\nstd::cout << (true ? (false ? \"A\" : \"B\") : \"C\");",
     "content": ["A", "B", "C"],
-    "solution": "B",
+    "solution": ["B"],
     "hints": [
       "Evaluate the outer ternary operator first.",
       "Then evaluate the nested ternary operator."
@@ -162,7 +162,7 @@
     "difficulty": 1,
     "explanation": "What is the index of the very first element in a C++ array?",
     "content": ["0", "1", "It can be chosen freely by the programmer"],
-    "solution": "0",
+    "solution": ["0"],
     "hints": [
       "C++ arrays use zero-based indexing.",
       "The first element is not at index 1."
@@ -180,7 +180,7 @@
       { "type": "input", "id": 0 },
       { "type": "text", "text": " = 100;" }
     ],
-    "solution": "[2]",
+    "solution": ["[2]"],
     "hints": [
       "Array indices start at 0.",
       "The third element has index 2."
@@ -198,7 +198,7 @@
       "It results in undefined behavior (out of bounds)",
       "The compiler automatically stops the program"
     ],
-    "solution": "It results in undefined behavior (out of bounds)",
+    "solution": ["It results in undefined behavior (out of bounds)"],
     "hints": [
       "A size-5 array has valid indices from 0 to 4.",
       "Accessing beyond the last element is not checked automatically."
@@ -216,7 +216,7 @@
       "sizeof(arr)",
       "sizeof(arr) / sizeof(arr[0])"
     ],
-    "solution": "sizeof(arr) / sizeof(arr[0])",
+    "solution": ["sizeof(arr) / sizeof(arr[0])"],
     "hints": [
       "'sizeof(arr)' returns the array's size in bytes.",
       "Divide by the size of one element."
@@ -234,7 +234,7 @@
       { "type": "input", "id": 0 },
       { "type": "text", "text": ";" }
     ],
-    "solution": "values[3]",
+    "solution": ["values[3]"],
     "hints": [
       "The array name comes before the brackets.",
       "The number inside the brackets specifies the array size."
@@ -248,7 +248,7 @@
       "difficulty": 1,
       "explanation": "Which keyword is used in C++ to check an alternative condition if the first 'if' condition was false?",
       "content": ["else if", "elif", "otherwise"],
-      "solution": "else if",
+      "solution": ["else if"],
       "hints": [
         "This keyword combines 'else' and 'if'.",
         "It allows you to check another condition if the first one was false."
@@ -262,7 +262,7 @@
       "difficulty": 1,
       "explanation": "What happens if the condition in an if statement evaluates to 'false' and no 'else' block exists?",
       "content": ["The code inside the curly braces is skipped and the program continues normally.", "The program crashes.", "The compiler throws an error."],
-      "solution": "The code inside the curly braces is skipped and the program continues normally.",
+      "solution": ["The code inside the curly braces is skipped and the program continues normally."],
       "hints": [
         "Think about what happens when no condition matches.",
         "An 'else' block is optional."
@@ -280,7 +280,7 @@
           { "type": "input", "id": 0 },
           { "type": "text", "text": ") { std::cout << \"Adult\"; }" }
       ],
-      "solution": ">= 18",
+      "solution": [">= 18"],
       "hints": [
        "At least 18 means 18 or greater.",
         "Use the 'greater than or equal to' comparison operator."
@@ -298,7 +298,7 @@
           { "type": "input", "id": 0 },
           { "type": "text", "text": ") { std::cout << \"Zero\"; }" }
       ],
-      "solution": "== 0",
+      "solution": ["== 0"],
       "hints": [
         "Use the equality comparison operator, not the assignment operator.",
         "You want to compare 'x' with 0."
@@ -316,7 +316,7 @@
           { "type": "input", "id": 0 },
           { "type": "text", "text": " { std::cout << \"Equal\"; }" }
       ],
-      "solution": "else",
+      "solution": ["else"],
       "hints": [
         "This block runs if none of the previous conditions were true.",
         "It does not require a condition."
@@ -330,7 +330,7 @@
       "difficulty": 1,
       "explanation": "When is the condition checked in a standard 'while' loop in C++?",
       "content": ["Before each iteration of the loop (pre-test)", "After each iteration of the loop (post-test)", "Only once at the very beginning"],
-      "solution": "Before each iteration of the loop (pre-test)",
+      "solution": ["Before each iteration of the loop (pre-test)"],
       "hints": [ 
         "A while loop is called a pre-test loop.",
         "The condition is checked before the loop body executes."
@@ -344,7 +344,7 @@
       "difficulty": 2,
       "explanation": "What happens in the following code snippet?\nint i = 0;\nwhile(i < 5) {\n  std::cout << i;\n}",
       "content": ["It creates an infinite loop because 'i' is never incremented inside the loop.", "The numbers 0 to 4 are printed.", "The code executes exactly 5 times."],
-      "solution": "It creates an infinite loop because 'i' is never incremented inside the loop.",
+      "solution": ["It creates an infinite loop because 'i' is never incremented inside the loop."],
       "hints": [ 
         "Look for a statement that changes 'i'.",
         "If the condition never becomes false, the loop never ends."
@@ -362,7 +362,7 @@
           { "type": "input", "id": 0 },
           { "type": "text", "text": ") { counter--; }" }
       ],
-      "solution": "counter > 0",
+      "solution": ["counter > 0"],
       "hints": [
         "The loop should continue only while 'counter' is positive.",
         "Use the 'greater than' comparison operator."
@@ -380,7 +380,7 @@
           { "type": "input", "id": 0 },
           { "type": "text", "text": ") { // Infinite code }" }
       ],
-      "solution": "true",
+      "solution": ["true"],
       "hints": [
         "Use a condition that never evaluates to false.",
         "There is a boolean literal that is always true."
@@ -398,7 +398,7 @@
           { "type": "input", "id": 0 },
           { "type": "text", "text": ") { // Game is running... }" }
       ],
-      "solution": "!isGameOver",
+      "solution": ["!isGameOver"],
       "hints": [
         "The loop should continue while the game is not over.",
         "Use the logical NOT operator."

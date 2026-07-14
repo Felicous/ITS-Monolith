@@ -9,7 +9,6 @@ export function InputAnalysis(task, input) {
         .map(x => x.toLowerCase())
         .sort();
 
-
-    return (normalizedInput === normalizedSolution);
+    return (JSON.stringify(normalizedInput) === JSON.stringify(normalizedSolution));
 
 }

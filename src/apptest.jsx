@@ -9,7 +9,7 @@ import { HintDisplay } from './HintDisplay';
 import { TaskSelection } from './TaskSelection'
 import { RenderTask } from './RenderTask';
 import { InputAnalysis } from './InputAnalysis';
-import { updateStudent } from './StudentModel';
+import { updateStudent, save } from './StudentModel';
 
 
 
@@ -21,6 +21,7 @@ function TestApp() {
       const correct = InputAnalysis(task, input);
       updateStudent(task.id, task.concept, correct);
       // save aufrufen für speichern in persistenz
+      save();
     }
 
   return (
