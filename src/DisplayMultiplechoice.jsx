@@ -35,7 +35,8 @@ export function DisplayMultiplechoice({task, onSubmit}) {
     }
 
     if (valid) {
-      onSubmit(selected)
+      onSubmit(selected);
+      setSelected([])
     }
   };
   
