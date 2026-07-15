@@ -4,7 +4,7 @@
     "concept": "for_loops",
     "type": "multiple-choice",
     "difficulty": 1,
-    "explanation": "How many times does this loop execute?",
+    "explanation": "How many times does this loop execute? ** for (int i = 0; i < 5; i++) **",
     "content": ["4 times", "5 times", "6 times"],
     "solution": ["5 times"],
     "hints": [
@@ -34,9 +34,27 @@
   {
     "id": 2,
     "concept": "for_loops",
+    "type": "code-completion",
+    "difficulty": 1,
+    "explanation": "Initialize the counter variable 'i' to 0 in the loop header.",
+    "content": [
+      { "type": "text", "text": "for (" },
+      { "type": "input", "id": 0 },
+      { "type": "text", "text": " i < 5; i++) { /* Code */ }" }
+    ],
+    "solution": ["int i = 0;"],
+    "hints": [
+      "You need to declare 'i' as an integer and assign it the value of zero.",
+      "Remember to end the initialization statement with a semicolon."
+    ]
+  },
+
+  {
+    "id": 3,
+    "concept": "for_loops",
     "type": "multiple-choice",
     "difficulty": 2,
-    "explanation": "What does this code output?\nint sum = 0;\nfor(int i = 1; i <= 3; i++) {\n  sum += i;\n}\nstd::cout << sum;",
+    "explanation": "What does this code output? ** int sum = 0; for(int i = 1; i <= 3; i++) {sum += i;} std::cout << sum; ** ",
     "content": ["3", "5", "6"],
     "solution": ["6"],
     "hints": [
@@ -46,7 +64,7 @@
   },
 
   {
-    "id": 3,
+    "id": 4,
     "concept": "for_loops",
     "type": "code-completion",
     "difficulty": 2,
@@ -62,13 +80,31 @@
       "Increase the counter by two each iteration."
     ]
   },
+  
+  {
+    "id": 5,
+    "concept": "for_loops",
+    "type": "code-completion",
+    "difficulty": 2,
+    "explanation": "Complete the loop update statement so that 'i' is decremented by 1 in each step (counting down).",
+    "content": [
+      { "type": "text", "text": "for (int i = 10; i > 0; " },
+      { "type": "input", "id": 0 },
+      { "type": "text", "text": ") { /* Code */ }" }
+    ],
+    "solution": ["i--"],
+    "hints": [
+      "To count down, you need to decrease the value of 'i'.",
+      "Use the decrement operator."
+    ]
+  },
 
   {
-    "id": 4,
+    "id": 6,
     "concept": "for_loops",
     "type": "multiple-choice",
     "difficulty": 3,
-    "explanation": "What happens with the following code?\nfor(int i = 5; i > 0; i++) { }",
+    "explanation": "What happens with the following code? ** for(int i = 5; i > 0; i++) { } ** ",
     "content": [
       "Infinite loop (until integer overflow)",
       "The loop runs 5 times in reverse",
@@ -82,7 +118,7 @@
   },
 
   {
-    "id": 5,
+    "id": 7,
     "concept": "for_loops",
     "type": "multiple-choice",
     "difficulty": 3,
@@ -92,11 +128,11 @@
     "hints": [
       "There is a keyword specifically for leaving loops.",
       "'return' exits the current function."
-    ]
+    ]    
   },
 
   {
-    "id": 6,
+    "id": 8,
     "concept": "ternary_op",
     "type": "multiple-choice",
     "difficulty": 1,
@@ -108,13 +144,32 @@
       "One symbol starts the choices, another separates them."
     ]
   },
-
+  
   {
-    "id": 7,
+    "id": 9,
+    "concept": "ternary_op",
+    "type": "code-completion",
+    "difficulty": 1,
+    "explanation": "Complete the ternary operator to return the character 'Y' if 'isHappy' is true, and 'N' otherwise.",
+    "content": [
+      { "type": "text", "text": "char result = isHappy " },
+      { "type": "input", "id": 0 },
+      { "type": "text", "text": " 'N';" }
+    ],
+    "solution": ["? 'Y' :"],
+    "hints": [
+      "The symbol '?' starts the outcomes after the condition.",
+      "The colon ':' separates the true expression from the false expression."
+    ]
+  },
+  
+  
+  {
+    "id": 10,
     "concept": "ternary_op",
     "type": "multiple-choice",
     "difficulty": 2,
-    "explanation": "What is the value of 'x' after this line?\nint x = (10 > 5) ? 42 : 99;",
+    "explanation": "What is the value of 'x' after this line? ** int x = (10 > 5) ? 42 : 99; ** ",
     "content": ["10", "42", "99"],
     "solution": ["42"],
     "hints": [
@@ -124,7 +179,7 @@
   },
 
   {
-    "id": 8,
+    "id": 11,
     "concept": "ternary_op",
     "type": "code-completion",
     "difficulty": 2,
@@ -140,13 +195,31 @@
       "Choose 'a' if the condition is true, otherwise choose 'b'."
     ]
   },
+  
+  {
+    "id": 12,
+    "concept": "ternary_op",
+    "type": "code-completion",
+    "difficulty": 2,
+    "explanation": "Complete the assignment using the ternary operator so that 'status' is \"Pass\" if 'score' is 50 or higher, and \"Fail\" otherwise.",
+    "content": [
+      { "type": "text", "text": "std::string status = " },
+      { "type": "input", "id": 0 },
+      { "type": "text", "text": ";" }
+    ],
+    "solution": ["score >= 50 ? \"Pass\" : \"Fail\""],
+    "hints": [
+      "First check if 'score' is greater than or equal to 50.",
+      "Use the question mark '?' to start your decisions and colon ':' to separate them."
+    ]
+  },
 
   {
-    "id": 9,
+    "id": 13,
     "concept": "ternary_op",
     "type": "multiple-choice",
     "difficulty": 3,
-    "explanation": "What is printed here?\nstd::cout << (true ? (false ? \"A\" : \"B\") : \"C\");",
+    "explanation": "What is printed here? ** std::cout << (true ? (false ? \"A\" : \"B\") : \"C\"); ** ",
     "content": ["A", "B", "C"],
     "solution": ["B"],
     "hints": [
@@ -156,7 +229,7 @@
   },
 
   {
-    "id": 10,
+    "id": 14,
     "concept": "arrays",
     "type": "multiple-choice",
     "difficulty": 1,
@@ -170,7 +243,25 @@
   },
 
   {
-    "id": 11,
+    "id": 15,
+    "concept": "arrays",
+    "type": "code-completion",
+    "difficulty": 1,
+    "explanation": "Access the very first element of the array 'scores' and set its value to 95.",
+    "content": [
+      { "type": "text", "text": "scores" },
+      { "type": "input", "id": 0 },
+      { "type": "text", "text": " = 95;" }
+    ],
+    "solution": ["[0]"],
+    "hints": [
+      "Arrays in C++ are zero-indexed.",
+      "Put the first index number inside square brackets."
+    ]
+  },
+
+  {
+    "id": 16,
     "concept": "arrays",
     "type": "code-completion",
     "difficulty": 2,
@@ -188,7 +279,7 @@
   },
 
   {
-    "id": 12,
+    "id": 17,
     "concept": "arrays",
     "type": "multiple-choice",
     "difficulty": 2,
@@ -206,7 +297,25 @@
   },
 
   {
-    "id": 13,
+    "id": 18,
+    "concept": "arrays",
+    "type": "code-completion",
+    "difficulty": 2,
+    "explanation": "Complete the array declaration to create a float array named 'prices' that contains the initialized values {1.99f, 2.99f, 3.99f}.",
+    "content": [
+      { "type": "text", "text": "float " },
+      { "type": "input", "id": 0 },
+      { "type": "text", "text": " = {1.99f, 2.99f, 3.99f};" }
+    ],
+    "solution": ["prices[]"],
+    "hints": [
+      "Provide the name of the array.",
+      "Use empty square brackets so the compiler automatically deduces the size from the initializer list."
+    ]
+  },
+
+  {
+    "id": 19,
     "concept": "arrays",
     "type": "multiple-choice",
     "difficulty": 3,
@@ -224,7 +333,7 @@
   },
   
   {
-    "id": 14,
+    "id": 20,
     "concept": "arrays",
     "type": "code-completion",
     "difficulty": 3,
@@ -242,166 +351,237 @@
   },
 
   {
-      "id": 15,
-      "concept": "if_statements",
-      "type": "multiple-choice",
-      "difficulty": 1,
-      "explanation": "Which keyword is used in C++ to check an alternative condition if the first 'if' condition was false?",
-      "content": ["else if", "elif", "otherwise"],
-      "solution": ["else if"],
-      "hints": [
-        "This keyword combines 'else' and 'if'.",
-        "It allows you to check another condition if the first one was false."
-      ]
-  },
-
-  {
-      "id": 16,
-      "concept": "if_statements",
-      "type": "multiple-choice",
-      "difficulty": 1,
-      "explanation": "What happens if the condition in an if statement evaluates to 'false' and no 'else' block exists?",
-      "content": ["The code inside the curly braces is skipped and the program continues normally.", "The program crashes.", "The compiler throws an error."],
-      "solution": ["The code inside the curly braces is skipped and the program continues normally."],
-      "hints": [
-        "Think about what happens when no condition matches.",
-        "An 'else' block is optional."
-      ]
-  },
-
-  {
-      "id": 17,
-      "concept": "if_statements",
-      "type": "code-completion",
-      "difficulty": 2,
-      "explanation": "Complete the condition so that the code executes if the variable 'age' is at least 18.",
-      "content": [
-          { "type": "text", "text": "if (age " },
-          { "type": "input", "id": 0 },
-          { "type": "text", "text": ") { std::cout << \"Adult\"; }" }
-      ],
-      "solution": [">= 18"],
-      "hints": [
-       "At least 18 means 18 or greater.",
-        "Use the 'greater than or equal to' comparison operator."
-      ]
-  },
-
-  {
-      "id": 18,
-      "concept": "if_statements",
-      "type": "code-completion",
-      "difficulty": 2,
-      "explanation": "Complete the code to check if the variable 'x' is exactly equal to 0.",
-      "content": [
-          { "type": "text", "text": "if (x " },
-          { "type": "input", "id": 0 },
-          { "type": "text", "text": ") { std::cout << \"Zero\"; }" }
-      ],
-      "solution": ["== 0"],
-      "hints": [
-        "Use the equality comparison operator, not the assignment operator.",
-        "You want to compare 'x' with 0."
+    "id": 21,
+    "concept": "if_statements",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "explanation": "Which keyword is used in C++ to check an alternative condition if the first 'if' condition was false?",
+    "content": ["else if", "elif", "otherwise"],
+    "solution": ["else if"],
+    "hints": [
+      "This keyword combines 'else' and 'if'.",
+      "It allows you to check another condition if the first one was false."
     ]
   },
 
   {
-      "id": 19,
-      "concept": "if_statements",
-      "type": "code-completion",
-      "difficulty": 3,
-      "explanation": "Complete the conditional structure for the default fallback case, which executes when none of the above if/else-if conditions were true.",
-      "content": [
-          { "type": "text", "text": "if (a > b) { /*...*/ } else if (a < b) { /*...*/ } " },
-          { "type": "input", "id": 0 },
-          { "type": "text", "text": " { std::cout << \"Equal\"; }" }
-      ],
-      "solution": ["else"],
-      "hints": [
-        "This block runs if none of the previous conditions were true.",
-        "It does not require a condition."
+    "id": 22,
+    "concept": "if_statements",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "explanation": "What happens if the condition in an if statement evaluates to 'false' and no 'else' block exists?",
+    "content": ["The code inside the curly braces is skipped and the program continues normally.", "The program crashes.", "The compiler throws an error."],
+    "solution": ["The code inside the curly braces is skipped and the program continues normally."],
+    "hints": [
+      "Think about what happens when no condition matches.",
+      "An 'else' block is optional."
     ]
   },
 
   {
-      "id": 20,
-      "concept": "while_loops",
-      "type": "multiple-choice",
-      "difficulty": 1,
-      "explanation": "When is the condition checked in a standard 'while' loop in C++?",
-      "content": ["Before each iteration of the loop (pre-test)", "After each iteration of the loop (post-test)", "Only once at the very beginning"],
-      "solution": ["Before each iteration of the loop (pre-test)"],
-      "hints": [ 
-        "A while loop is called a pre-test loop.",
-        "The condition is checked before the loop body executes."
+    "id": 23,
+    "concept": "if_statements",
+    "type": "code-completion",
+    "difficulty": 1,
+    "explanation": "Complete the if statement header so that the body is executed only if 'isLightOn' is true.",
+    "content": [
+      { "type": "text", "text": "if (" },
+      { "type": "input", "id": 0 },
+      { "type": "text", "text": ") { std::cout << \"The room is bright.\"; }" }
+    ],
+    "solution": ["isLightOn"],
+    "hints": [
+      "You don't need comparison operators for boolean values.",
+      "Simply insert the boolean variable inside the parentheses."
     ]
   },
 
   {
-      "id": 21,
-      "concept": "while_loops",
-      "type": "multiple-choice",
-      "difficulty": 2,
-      "explanation": "What happens in the following code snippet?\nint i = 0;\nwhile(i < 5) {\n  std::cout << i;\n}",
-      "content": ["It creates an infinite loop because 'i' is never incremented inside the loop.", "The numbers 0 to 4 are printed.", "The code executes exactly 5 times."],
-      "solution": ["It creates an infinite loop because 'i' is never incremented inside the loop."],
-      "hints": [ 
-        "Look for a statement that changes 'i'.",
-        "If the condition never becomes false, the loop never ends."
+    "id": 24,
+    "concept": "if_statements",
+    "type": "code-completion",
+    "difficulty": 2,
+    "explanation": "Complete the condition so that the code executes if the variable 'age' is at least 18.",
+    "content": [
+        { "type": "text", "text": "if (age " },
+        { "type": "input", "id": 0 },
+        { "type": "text", "text": ") { std::cout << \"Adult\"; }" }
+    ],
+    "solution": [">= 18"],
+    "hints": [
+      "At least 18 means 18 or greater.",
+      "Use the 'greater than or equal to' comparison operator."
     ]
   },
 
   {
-      "id": 22,
-      "concept": "while_loops",
-      "type": "code-completion",
-      "difficulty": 2,
-      "explanation": "Complete the loop condition so that the loop runs as long as the variable 'counter' is greater than 0.",
-      "content": [
-          { "type": "text", "text": "while (" },
-          { "type": "input", "id": 0 },
-          { "type": "text", "text": ") { counter--; }" }
-      ],
-      "solution": ["counter > 0"],
-      "hints": [
-        "The loop should continue only while 'counter' is positive.",
-        "Use the 'greater than' comparison operator."
+    "id": 25,
+    "concept": "if_statements",
+    "type": "code-completion",
+    "difficulty": 2,
+    "explanation": "Complete the code to check if the variable 'x' is exactly equal to 0.",
+    "content": [
+      { "type": "text", "text": "if (x " },
+      { "type": "input", "id": 0 },
+      { "type": "text", "text": ") { std::cout << \"Zero\"; }" }
+    ],
+    "solution": ["== 0"],
+    "hints": [
+      "Use the equality comparison operator, not the assignment operator.",
+      "You want to compare 'x' with 0."
+    ]
+  },
+    
+  {
+    "id": 26,
+    "concept": "if_statements",
+    "type": "code-completion",
+    "difficulty": 2,
+    "explanation": "Complete the condition to execute the block if 'temperature' is strictly less than 0 or strictly greater than 100.",
+    "content": [
+      { "type": "text", "text": "if (" },
+      { "type": "input", "id": 0 },
+      { "type": "text", "text": ") { std::cout << \"Extreme temperature!\"; }" }
+    ],
+    "solution": ["temperature < 0 || temperature > 100"],
+    "hints": [
+      "Use the '<' and '>' operators for comparisons.",
+      "Combine the two conditions using the logical OR operator '||'."
     ]
   },
 
   {
-      "id": 23,
-      "concept": "while_loops",
-      "type": "code-completion",
-      "difficulty": 3,
-      "explanation": "Create an intentional infinite loop by entering a condition that is always true.",
-      "content": [
-          { "type": "text", "text": "while (" },
-          { "type": "input", "id": 0 },
-          { "type": "text", "text": ") { // Infinite code }" }
-      ],
-      "solution": ["true"],
-      "hints": [
-        "Use a condition that never evaluates to false.",
-        "There is a boolean literal that is always true."
-      ]
+    "id": 27,
+    "concept": "if_statements",
+    "type": "code-completion",
+    "difficulty": 3,
+    "explanation": "Complete the conditional structure for the default fallback case, which executes when none of the above if/else-if conditions were true.",
+    "content": [
+        { "type": "text", "text": "if (a > b) { /*...*/ } else if (a < b) { /*...*/ } " },
+        { "type": "input", "id": 0 },
+        { "type": "text", "text": " { std::cout << \"Equal\"; }" }
+    ],
+    "solution": ["else"],
+    "hints": [
+      "This block runs if none of the previous conditions were true.",
+      "It does not require a condition."
+    ]
   },
 
   {
-      "id": 24,
-      "concept": "while_loops",
-      "type": "code-completion",
-      "difficulty": 3,
-      "explanation": "Complete the loop header of a while loop that runs as long as the boolean 'isGameOver' is NOT true (meaning false).",
-      "content": [
-          { "type": "text", "text": "while (" },
-          { "type": "input", "id": 0 },
-          { "type": "text", "text": ") { // Game is running... }" }
-      ],
-      "solution": ["!isGameOver"],
-      "hints": [
-        "The loop should continue while the game is not over.",
-        "Use the logical NOT operator."
+    "id": 28,
+    "concept": "while_loops",
+    "type": "multiple-choice",
+    "difficulty": 1,
+    "explanation": "When is the condition checked in a standard 'while' loop in C++?",
+    "content": ["Before each iteration of the loop (pre-test)", "After each iteration of the loop (post-test)", "Only once at the very beginning"],
+    "solution": ["Before each iteration of the loop (pre-test)"],
+    "hints": [ 
+      "A while loop is called a pre-test loop.",
+      "The condition is checked before the loop body executes."
+    ]
+  },
+
+  {
+    "id": 29,
+    "concept": "while_loops",
+    "type": "code-completion",
+    "difficulty": 1,
+    "explanation": "Complete the standard while loop keyword to initiate the loop structure.",
+    "content": [
+      { "type": "input", "id": 0 },
+      { "type": "text", "text": " (x < 10) { x++; }" }
+    ],
+    "solution": ["while"],
+    "hints": [
+      "Which lowercase keyword starts a while loop?",
+      "It is spelt exactly as the loop type's name."
+    ]
+  },
+
+  {
+    "id": 30,
+    "concept": "while_loops",
+    "type": "multiple-choice",
+    "difficulty": 2,
+    "explanation": "What happens in the following code snippet? ** int i = 0; while(i < 5) {std::cout << i;} ** ",
+    "content": ["It creates an infinite loop because 'i' is never incremented inside the loop.", "The numbers 0 to 4 are printed.", "The code executes exactly 5 times."],
+    "solution": ["It creates an infinite loop because 'i' is never incremented inside the loop."],
+    "hints": [ 
+      "Look for a statement that changes 'i'.",
+      "If the condition never becomes false, the loop never ends."
+    ]
+  },
+
+  {
+    "id": 31,
+    "concept": "while_loops",
+    "type": "code-completion",
+    "difficulty": 2,
+    "explanation": "Complete the loop condition so that the loop runs as long as the variable 'counter' is greater than 0.",
+    "content": [
+        { "type": "text", "text": "while (" },
+        { "type": "input", "id": 0 },
+        { "type": "text", "text": ") { counter--; }" }
+    ],
+    "solution": ["counter > 0"],
+    "hints": [
+      "The loop should continue only while 'counter' is positive.",
+      "Use the 'greater than' comparison operator."
+    ]
+  },
+
+  {
+    "id": 32,
+    "concept": "while_loops",
+    "type": "code-completion",
+    "difficulty": 2,
+    "explanation": "Complete the condition so that the loop stops as soon as the string 'input' is equal to \"exit\".",
+    "content": [
+      { "type": "text", "text": "while (" },
+      { "type": "input", "id": 0 },
+      { "type": "text", "text": ") { /* Process input */ }" }
+    ],
+    "solution": ["input != \"exit\""],
+    "hints": [
+      "The loop should run *as long as* the input is NOT \"exit\".",
+      "Use the 'not equal to' operator '!='."
+    ]
+  },
+
+  {
+    "id": 33,
+    "concept": "while_loops",
+    "type": "code-completion",
+    "difficulty": 3,
+    "explanation": "Create an intentional infinite loop by entering a condition that is always true.",
+    "content": [
+        { "type": "text", "text": "while (" },
+        { "type": "input", "id": 0 },
+        { "type": "text", "text": ") { // Infinite code }" }
+    ],
+    "solution": ["true"],
+    "hints": [
+      "Use a condition that never evaluates to false.",
+      "There is a boolean literal that is always true."
+    ]
+  },
+
+  {
+    "id": 34,
+    "concept": "while_loops",
+    "type": "code-completion",
+    "difficulty": 3,
+    "explanation": "Complete the loop header of a while loop that runs as long as the boolean 'isGameOver' is NOT true (meaning false).",
+    "content": [
+        { "type": "text", "text": "while (" },
+        { "type": "input", "id": 0 },
+        { "type": "text", "text": ") { // Game is running... }" }
+    ],
+    "solution": ["!isGameOver"],
+    "hints": [
+      "The loop should continue while the game is not over.",
+      "Use the logical NOT operator."
     ]
   }
 ]

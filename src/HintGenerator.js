@@ -18,7 +18,8 @@ export async function generateAiHint(task, hintCount) {
       config: {
         systemInstruction: `You are an intelligent tutoring system. Always give only one clear hint.
         Never directly reveal the final result or the correct solution (solution is: "${task.solution}"). Adjust the hint based on the difficulty (difficulty is: "${task.difficulty}") 
-        and use the hints given in the task object (hints are: "${task.hints}") as a guidline for formulating your hint. Give hints in english.`,
+        and use the hints given in the task object (hints are: "${task.hints}") as a guidline for formulating your hint. Alternate the hints given in ${task.hints} for your own reply. 
+        Give hints in english.`,
       }
     });
     return response.text;

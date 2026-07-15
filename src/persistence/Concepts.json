@@ -5,9 +5,9 @@
         "tasks": [0, 1, 2, 3, 4, 5],
         "explanation": "Welcome to the topic of for loops! A for loop is used in C++ to repeat a block of code a specific number of times. It consists of the initialization (e.g., int i = 0), which is executed bevore the loop begins, the loop condition (e.g., i < 10), and the increment (e.g., i++), which is executed everytime when the code in the loop got executed and is usually used to progress towards the end of the loop condition. For example 'i++'. Here the loop would be executed 6 times for every number from 0 to 5",
         "content": [ 
-        {
+            {
                 "indent": "0em",
-                "text": "for (initialization; loop condition; increment) {"
+                "text": "for (int i = 0; i <= 5; i++) {"
             },
             {
                 "indent": "2em",
