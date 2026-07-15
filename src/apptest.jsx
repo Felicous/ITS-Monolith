@@ -20,9 +20,11 @@ function TestApp() {
 
     const [result, setResult] = useState(false);
 
+    const [correct, setCorrect] = useState(false);
+
     function HandleUserInput(task, input) {
 
-      const correct = InputAnalysis(task, input);
+      setCorrect(InputAnalysis(task, input));
 
       updateStudent(task.id, task.concept, correct);
 
@@ -49,7 +51,10 @@ function TestApp() {
       )}
 
       {result && (
-        <DisplayResult task={nextTask} result={result}/>
+        <DisplayResult 
+          task={nextTask} 
+          taskCorrect={correct}
+        />
       )}
     </>
   )

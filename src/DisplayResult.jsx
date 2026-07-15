@@ -1,13 +1,21 @@
 import { Box } from "@mui/material";
 
-export function DisplayResult(task, correct) {
+export function DisplayResult({task, taskCorrect}) {
 
     // space for more detailed display based on task details
-
-    return(
-            <Box>
-                That was the {correct ? "correct" : "wrong"} answer
-            </Box>
-        )
+    
+    switch(taskCorrect) {
+        case true:
+            return (
+                <Box>
+                    That was the correct answer
+                </Box>);
+        case false:
+            return (
+                <Box>
+                    That was the wrong answer
+                </Box>
+            );
+    }
     
 }
