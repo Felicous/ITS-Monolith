@@ -13,7 +13,7 @@ app.use(express.text());
 
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*"); // Erlaubt JEDEM Frontend (auch Port 5173) den Zugriff
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Conten-Type, Accept");
     next();
 });
 
