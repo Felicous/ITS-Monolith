@@ -2,7 +2,7 @@
     {
         "id": "for_loops",
         "prerequisites": [],
-        "tasks": [0, 1, 2, 3, 4, 5],
+        "tasks": [0, 1, 2, 3, 4, 5, 6, 7],
         "explanation": "Welcome to the topic of for loops! A for loop is used in C++ to repeat a block of code a specific number of times. It consists of the initialization (e.g., int i = 0), which is executed bevore the loop begins, the loop condition (e.g., i < 10), and the increment (e.g., i++), which is executed everytime when the code in the loop got executed and is usually used to progress towards the end of the loop condition. For example 'i++'. Here the loop would be executed 6 times for every number from 0 to 5",
         "content": [ 
             {
@@ -23,7 +23,7 @@
     {
         "id": "ternary_op",
         "prerequisites": ["for_loops"],
-        "tasks": [6, 7, 8, 9],
+        "tasks": [8, 9, 10, 11, 12, 13],
         "explanation": "Welcome to the ternary operator (?:)! This operator is a shorthand for a simple if-else statement. The syntax is: condition ? value_if_true : value_if_false; For example 'int result = (5 > 3) ? 10 : 20;'. Here the condition is true, so the variable 'result' would be assigned the value 10 instead of 20.",
         "content": [
             {
@@ -48,7 +48,7 @@
     {
         "id": "arrays",
         "prerequisites": ["for_loops", "ternary_op"],
-        "tasks": [10, 11, 12, 13, 14],
+        "tasks": [14, 15, 16, 17, 18, 19, 20],
         "explanation": "Welcome to arrays! An array stores multiple values of the same data type contiguously in memory. In C++, for example, you declare an array like this: int myArray[5]; Access is achieved via an index that always starts at 0. For example 'int myArray[3] = {10, 20, 30};'. Here you could access the first element with 'myArray[0]' to get the value 10, or 'myArray[2]' to get the third value, which is 30.",
         "content": [
             {
@@ -81,7 +81,7 @@
     {
         "id": "if_statements",
         "prerequisites": [],
-        "tasks": [15, 16, 17, 18, 19],
+        "tasks": [21, 22, 23, 24, 25, 26, 27],
         "explanation": "Welcome to the topic of if statements! An if statement is used in C++ to execute a block of code only if a specific condition is true. It can be extended with an 'else if' to check another condition if the first one was false, and an 'else' block that catches everything if no condition was met. For example 'if (points >= 50) { passed = true; }'. Here the code inside the curly braces would only be executed and set 'passed' to true if the variable 'points' holds a value of 50 or higher.",
         "content": [
             {
@@ -118,7 +118,7 @@
     {
         "id": "while_loops",
         "prerequisites": [],
-        "tasks": [20, 21, 22, 23, 24],
+        "tasks": [28, 29, 30, 31, 32, 33, 34],
         "explanation": "Welcome to the topic of while loops! A while loop is used in C++ to repeat a block of code as long as a specified condition remains true. Unlike a for loop, it is usually used when you do not know in advance exactly how many times the loop needs to run. The condition is checked before every iteration. For example 'while (energy > 0) { energy--; }'. Here the loop will keep running and decreasing the 'energy' variable by 1 until 'energy' reaches 0, which makes the condition false and ends the loop.",
         "content": [
             {

@@ -24,9 +24,12 @@ function TestApp() {
 
     function HandleUserInput(task, input) {
 
-      setCorrect(InputAnalysis(task, input));
+      /** @type {boolean} - Result of the analysis of the users input */
+      const isCorrect = InputAnalysis(task, input);
 
-      updateStudent(task.id, task.concept, correct);
+      setCorrect(isCorrect);
+
+      updateStudent(task.id, task.concept, isCorrect);
 
       setResult(true);
 
