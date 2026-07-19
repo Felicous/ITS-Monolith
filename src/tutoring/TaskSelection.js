@@ -1,5 +1,5 @@
-import { domainReader } from "./DomainModel.js";
-import { getCorrectTasks, getFailedTasks, getKnowledge, getKnownConcepts, masterConcept, wasPresented } from "./StudentModel.js";
+import { domainReader } from "../domain/DomainModel.js";
+import { getCorrectTasks, getFailedTasks, getKnowledge, getKnownConcepts, masterConcept, wasPresented } from "../student/StudentModel.js";
 
 /**
  * Selects the next task based on the students unmastered concepts, their prerequisites and the students knowledge of this concept.

@@ -3,9 +3,9 @@ import { Button, Box, Typography, Paper, CircularProgress } from '@mui/material'
 import { generateAiHint } from './HintGenerator';
 
 export function HintDisplay({ task }) {
-  const [hint, setHint] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [hintCount, setHintCount] = useState(0);
+  const [hint, setHint] = useState(''); // Stores the currently displayed hint text          
+  const [loading, setLoading] = useState(false); // Tracks API request loading state
+  const [hintCount, setHintCount] = useState(0); // Tracks number of requested hints (max 2)
 
   // Reset on new task
   useEffect(() => {
@@ -13,6 +13,7 @@ export function HintDisplay({ task }) {
     setHintCount(0);
   }, [task?.id]);
 
+  // Handles async logic for hints from the ai generator
   const handleRequestHint = async () => {
     if (hintCount >= 2) return;
     setLoading(true);

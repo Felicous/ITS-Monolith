@@ -1,13 +1,16 @@
 import { GoogleGenAI } from '@google/genai';
 
+// Initialize Gemini AI client using the environment variables
 const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
 
 export async function generateAiHint(task, hintCount) {
-  if (!task) return "No task loaded.";
+  if (!task) return "No task loaded";
   
+  // API Request
   try {
     const response = await ai.models.generateContent({
       model: 'gemini-2.5-flash',
+      // Task details, that are given to the prompt
       contents: `
         Concepts: "${task.concept}"
         Type: "${task.type}"
@@ -15,6 +18,7 @@ export async function generateAiHint(task, hintCount) {
         Options: ${task.content ? task.content.join(', ') : ''}
         Hint Number ${hintCount + 1}.
       `,
+      // Prompt to AI
       config: {
         systemInstruction: `You are an intelligent tutoring system. Always give only one clear hint.
         Never directly reveal the final result or the correct solution (solution is: "${task.solution}"). Adjust the hint based on the difficulty (difficulty is: "${task.difficulty}") 
