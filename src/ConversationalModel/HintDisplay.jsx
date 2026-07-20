@@ -14,7 +14,7 @@ export function HintDisplay({ task }) {
   }, [task?.id]);
 
   // Handles async logic for hints from the ai generator
-  const handleRequestHint = async () => {
+  const handleHintRequest = async () => {
     if (hintCount >= 2) return;
     setLoading(true);
     
@@ -31,7 +31,7 @@ export function HintDisplay({ task }) {
       <Button 
         variant="contained" 
         color="secondary" 
-        onClick={handleRequestHint}
+        onClick={handleHintRequest}
         disabled={loading || hintCount >= 2}
         fullWidth
       >
