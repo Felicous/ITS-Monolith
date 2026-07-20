@@ -46,13 +46,21 @@ function ITS() {
           Next Task
       </Button>
     {/* Display only shows up, when task was selected */}
-    {(nextTask && !result) && (
+    {(nextTask && !result && nextTask.type != "explanation") && (
         <Box sx={{ mt: 2 }}>
           <RenderTask 
             task={nextTask} 
             onSubmit={HandleUserInput}
           />
           <HintDisplay task={nextTask} />
+        </Box>
+      )}
+
+    {(nextTask && !result && nextTask.type == "explanation") && (
+        <Box sx={{ mt: 2 }}>
+          <RenderTask 
+            task={nextTask}
+          />
         </Box>
       )}
 
