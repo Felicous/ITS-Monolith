@@ -2,8 +2,8 @@
     "knowledge": [
         {
             "id": "for_loops",
-            "mastery": 0.572015323448987,
-            "presented": true
+            "mastery": 0,
+            "presented": false
         },
         {
             "id": "ternary_op",
@@ -15,27 +15,22 @@
             "mastery": 0,
             "presented": false
         },
-        {
+                {
             "id": "if_statements",
-            "mastery": 0.2650717703349283,
-            "presented": true
+            "mastery": 0,
+            "presented": false
         },
-        {
+                {
             "id": "while_loops",
-            "mastery": 0.5704354774270874,
-            "presented": true
+            "mastery": 0,
+            "presented": false
         }
     ],
     "completedTasks": [
         {
             "id": "for_loops",
-            "correctTasks": [
-                0,
-                1
-            ],
-            "failedTasks": [
-                2
-            ]
+            "correctTasks": [],
+            "failedTasks": []
         },
         {
             "id": "ternary_op",
@@ -49,22 +44,13 @@
         },
         {
             "id": "if_statements",
-            "correctTasks": [
-                22
-            ],
-            "failedTasks": [
-                21,
-                24
-            ]
+            "correctTasks": [],
+            "failedTasks": []
         },
         {
             "id": "while_loops",
-            "correctTasks": [
-                28
-            ],
-            "failedTasks": [
-                29
-            ]
+            "correctTasks": [],
+            "failedTasks": []
         }
     ]
 }

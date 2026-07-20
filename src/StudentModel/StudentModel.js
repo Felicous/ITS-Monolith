@@ -9,7 +9,7 @@ const masteryThreshold = 0.95;
 let student;
 
 try {
-    const response = await fetch("http://localhost:3000/student");
+    const response = await fetch("http://localhost:3000/studentState");
     if (!response.ok) {
         throw new Error(`Response status: ${response.status}`);
     }
@@ -177,11 +177,11 @@ export function wasPresented(concept) {
 }
 
 /**
- * Saves the student data to Student.json
+ * Saves the student data to StudentState.json
  */
 export async function save() {
     await fetch(
-        "http://localhost:3000/student",
+        "http://localhost:3000/studentState",
         {
             method: 'POST',
             headers: {

@@ -3,12 +3,12 @@ import {
   Button,
   Box
  } from '@mui/material'
-import { HintDisplay } from './ai/HintDisplay';
-import { TaskSelection } from './tutoring/TaskSelection'
-import { RenderTask } from './tutoring/components/RenderTask';
-import { InputAnalysis } from './tutoring/InputAnalysis';
-import { updateStudent, save } from './student/StudentModel';
-import { DisplayResult } from './tutoring/components/DisplayResult';
+import { HintDisplay } from './ConversationalModel/HintDisplay';
+import { TaskSelection } from './TutoringModel/TaskSelection'
+import { RenderTask } from './TutoringModel/components/RenderTask';
+import { InputAnalysis } from './TutoringModel/InputAnalysis';
+import { updateStudent, save } from './StudentModel/StudentModel';
+import { DisplayResult } from './TutoringModel/components/DisplayResult';
 
 
 function ITS() {

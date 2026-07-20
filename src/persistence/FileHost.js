@@ -45,19 +45,19 @@ app.get("/tasks", (req, res) => {
 });
 
 /**
- * Function which returns the contents of Student.json
+ * Function which returns the contents of StudentState.json
  */
-app.get("/student", (req, res) => {
-    res.json(readJSON('./src/persistence/Student.json'));
+app.get("/studentState", (req, res) => {
+    res.json(readJSON('./src/persistence/StudentState.json'));
 });
 
 /**
- * Function which saves the given object in Student.json
+ * Function which saves the given object in StudentState.json
  */
-app.post("/student", (req, res) => {
+app.post("/studentState", (req, res) => {
     try {
         fs.writeFileSync(
-            './src/persistence/Student.json',
+            './src/persistence/StudentState.json',
             req.body
         );
         res.sendStatus(200);
